@@ -22,3 +22,15 @@ header {
   height: 35vh;
   border-bottom: 7px solid #eee;
 }
+
+main {
+  height: 65vh;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  width: 52rem;
+}
