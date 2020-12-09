@@ -64,7 +64,7 @@ document.querySelector('.again').addEventListener('click', function () {
 
   document.querySelector('.guess').textContent = null;
 
-  document.querySelector('.score').textContent = score;
+  document.querySelector('.score').textContent = '0';
 
   document.querySelector('.number').textContent = '?';
 
