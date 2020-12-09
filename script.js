@@ -34,6 +34,14 @@ document.querySelector('.check').addEventListener('click', function () {
 
     document.querySelector('.again').addEventListener('click', function () {
       document.querySelector('.number').textContent = '?';
+
+      document.querySelector('.guess').textContent = null;
+
+      document.querySelector('.message').textContent = 'Start guessing...';
+
+      document.querySelector('.score').textContent = '20';
+
+      document.querySelector('.highscore').textContent = '0';
     });
 
     // When player is too high
