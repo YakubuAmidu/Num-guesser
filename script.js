@@ -36,6 +36,7 @@ document.querySelector('.check').addEventListener('click', function () {
 
     if (score > hightScore) {
       hightScore = score;
+      document.querySelector('.highscore').textContent = hightScore;
     }
 
     // When player is too high
@@ -68,13 +69,11 @@ document.querySelector('.again').addEventListener('click', function () {
 
   document.querySelector('.message').textContent = 'Start guessing...';
 
-  document.querySelector('.guess').textContent = null;
-
   document.querySelector('.score').textContent = score;
 
   document.querySelector('.number').textContent = '?';
 
-  document.querySelector('.guess').value = ' ';
+  document.querySelector('.guess').value = '';
 
   document.querySelector('body').style.backgroundColor = '#222';
 
