@@ -33,26 +33,16 @@ document.querySelector('.check').addEventListener('click', function () {
 
     document.querySelector('.number').style.width = '30rem';
 
-    if (score > hightScore) {
-      hightScore = score;
-      document.querySelector('.highscore').textContent = hightScore;
+    if (score > highscore) {
+      hightscore = score;
+      document.querySelector('.highscore').textContent = highscore;
     }
 
     // When player is too high
-  } else if (guess > secretNumber) {
+  } else if (guess !== secretNumber) {
     if (score > 1) {
-      document.querySelector('.message').textContent = '📈 Too high';
-      score--;
-      document.querySelector('.score').textContent = score;
-    } else {
-      document.querySelector('.message').textContent = '💥 You loose the game';
-      document.querySelector('.score').textContent = 0;
-    }
-
-    // When player is too low
-  } else if (guess < secretNumber) {
-    if (score > 1) {
-      document.querySelector('.message').textContent = '📉 Too low';
+      document.querySelector('.message').textContent =
+        guess > secretNumber ? '📈 Too high' : '📉 Too low';
       score--;
       document.querySelector('.score').textContent = score;
     } else {
@@ -61,6 +51,30 @@ document.querySelector('.check').addEventListener('click', function () {
     }
   }
 });
+
+//     // When player is too high
+//   } else if (guess > secretNumber) {
+//     if (score > 1) {
+//       document.querySelector('.message').textContent = '📈 Too high';
+//       score--;
+//       document.querySelector('.score').textContent = score;
+//     } else {
+//       document.querySelector('.message').textContent = '💥 You loose the game';
+//       document.querySelector('.score').textContent = 0;
+//     }
+
+//     // When player is too low
+//   } else if (guess < secretNumber) {
+//     if (score > 1) {
+//       document.querySelector('.message').textContent = '📉 Too low';
+//       score--;
+//       document.querySelector('.score').textContent = score;
+//     } else {
+//       document.querySelector('.message').textContent = '💥 You loose the game';
+//       document.querySelector('.score').textContent = 0;
+//     }
+//   }
+// });
 
 document.querySelector('.again').addEventListener('click', function () {
   score = 20;
